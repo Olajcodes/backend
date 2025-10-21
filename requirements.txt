@@ -5,3 +5,5 @@ uvicorn
 dotenv
 pymysql
 SQLAlchemy
+bcrypt         # For decrypting password
+cryptography
