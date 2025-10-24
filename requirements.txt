@@ -7,3 +7,5 @@ pymysql
 SQLAlchemy
 bcrypt         # For decrypting password
 cryptography
+pyJWT
+alembic
