@@ -1,8 +1,8 @@
 """alter user table
 
-Revision ID: 4a172996f99b
+Revision ID: 1a64f6ecf08a
 Revises: 
-Create Date: 2025-10-23 11:31:22.894679
+Create Date: 2025-10-27 14:25:07.906812
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '4a172996f99b'
+revision: str = '1a64f6ecf08a'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -21,7 +21,7 @@ depends_on: Union[str, Sequence[str], None] = None
 def upgrade() -> None:
     op.execute("""
     ALTER TABLE users
-    ADD COLUMN userType varchar(100)
+    ADD COLUMN userType varchar(100) DEFAULT "student" ENUM("student", "admin")
 """)
     pass
 
